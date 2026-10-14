@@ -1,0 +1,147 @@
+/* Modo claro  */
+:root {
+    --fondo: #e0d3ee94;
+    --texto: #390d7ed2;
+    --principal: #b99cdc;
+    --caja: #ffffff;
+    --borde: #d1d5db;
+}
+
+/* Modo oscuro dandole al botonn */
+body:has(#oscuro:target) {
+    --fondo: #27144adc;
+    --texto: #e0e0e0;
+    --principal: #8f5fc9;
+    --caja: #2200568a;
+    --borde: #444444;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: var(--principal);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background-color: var(--caja);
+    border-bottom: 1px solid var(--borde);
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--texto);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: var(--principal);
+    color: white;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+section {
+    background-color: var(--caja);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--principal);
+    border-bottom: 2px solid var(--principal);
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+article {
+    background-color: var(--fondo);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: var(--caja);
+    color: var(--texto);
+}
+
+button {
+    background-color: var(--principal);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+
+footer {
+    background-color: var(--caja);
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--borde);
+    font-size: 14px;
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
